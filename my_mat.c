@@ -36,7 +36,13 @@ int hasPath(int mat[SIZE][SIZE]){
     printf("Enter the second node number: ");
     scanf("%d", last);
     int beenThere[10] = {0};
-    return hasPathHelper(mat, first, last, beenThere);
+    int ans = hasPathHelper(mat, first, last, beenThere);
+    if(ans = 1){
+        printf("True");
+    }
+    if(ans = 0){
+        printf("False");
+    }
 }
 
 
@@ -65,5 +71,10 @@ int shortestPath(int mat[SIZE][SIZE]){
     scanf("%d", first);
     printf("Enter the second node number: ");
     scanf("%d", last);
-    return D_mat[first][last];
+    if(D_mat[first][last] == 0){
+        printf("%d", -1);
+    }
+    else{
+        printf("%d", D_mat[first][last]);
+    }
 }
