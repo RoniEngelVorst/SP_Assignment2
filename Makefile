@@ -7,7 +7,7 @@ OBJECTS_MAIN_graph = my_graph.o my_mat.o
 OBJECT_MAIN_KNAP = my_Knapsack.o
 OBJECTS_graph= my_mat.o my_mat.h
 
-all: my_graph my_Knapsack my_mat.o my_Knapsack.o my_graph.o 
+all: my_graph my_Knapsack
 
 my_graph: $(OBJECTS_MAIN_graph) lib_graph.a
 	$(CC) $(FLAGS) -o my_graph $(OBJECTS_graph) my_graph.o

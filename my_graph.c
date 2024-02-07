@@ -5,7 +5,7 @@
 int main(){
     int mat[SIZE][SIZE] = {0};
     char userInput;
-    while (userInput != 'D')
+    while (userInput != 'D' && userInput != EOF)
     {
         scanf("%c", &userInput);
         
@@ -17,6 +17,7 @@ int main(){
         }
         if(userInput == 'C'){
             shortestPath(mat);
+            printf("\n");
         }
 
     }
