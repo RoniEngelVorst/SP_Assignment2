@@ -19,12 +19,7 @@ void inputMatrix(int mat[SIZE][SIZE]){
 
 int hasPathHelper(int mat[SIZE][SIZE], int first, int last, int beenThere[SIZE]){
     if(first == last){
-        if(mat[first][last] == 0){
-            return 0;
-        }
-        else{
-            return 1;
-        }
+        return 1;
     }
     
     beenThere[first] = 1;
@@ -46,6 +41,16 @@ int hasPath(int mat[SIZE][SIZE]){
     int first, last;
     scanf("%d", &first);
     scanf("%d", &last);
+    if(first == last){
+        if(mat[first][first] == 0){
+            printf("False\n");
+            return 0;
+        }
+        else{
+            printf("True\n");
+            return 1;
+        }
+    }
     int beenThere[SIZE] = {0};
     int ans = hasPathHelper(mat, first, last, beenThere);
     if(ans == 1){
