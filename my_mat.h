@@ -1,10 +1,11 @@
 #ifndef _MY_MAT_H
 #define _MY_MAT_H
+#define SIZE 10
 
-void inputMatrix(int[][]);
+void inputMatrix(int[SIZE][SIZE]);
 
-int hasPath(int[][]);
+int hasPath(int[SIZE][SIZE]);
 
-int shortestPath(int[][]);
+int shortestPath(int[SIZE][SIZE]);
 
 #endif
