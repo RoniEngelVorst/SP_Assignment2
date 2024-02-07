@@ -45,11 +45,12 @@ int main(){
     int weights[SIZE2];
     //getting the input from the user
     for(int i = 0; i < SIZE2; i++){
-        scanf("%c", &items[i]);
+        scanf(" %c", &items[i]);
         scanf("%d", &values[i]);
         scanf("%d", &weights[i]);
     }
     int result[SIZE2] = {0};
+    printf("calculating");
     int ans = knapSack(weights, values, result);
     printf("Maximum profit: %d\n", ans);
     printf("Selected items: ");
@@ -58,6 +59,7 @@ int main(){
             printf("%c ", items[i]);
         }
     }
+    printf("\n");
 
 
     return 0;

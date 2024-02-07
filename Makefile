@@ -18,7 +18,7 @@ my_mat.o: my_mat.c my_mat.h
 my_Knapsack: $(OBJECT_MAIN_KNAP) my_Knapsack.h
 	$(CC) $(FLAGS) -o my_Knapsack $(OBJECT_MAIN_KNAP) my_Knapsack.h
 my_Knapsack.o: my_Knapsack.c my_Knapsack.h
-	$(CC) $(FLAGS) -C my_Knapsack.c
+	$(CC) $(FLAGS) -c my_Knapsack.c
 my_graph.o:my_graph.c my_mat.h
 	$(CC) $(FLAGS) -c my_graph.c
 
