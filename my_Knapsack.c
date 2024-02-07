@@ -50,13 +50,12 @@ int main(){
         scanf("%d", &weights[i]);
     }
     int result[SIZE2] = {0};
-    printf("calculating");
     int ans = knapSack(weights, values, result);
     printf("Maximum profit: %d\n", ans);
-    printf("Selected items: ");
+    printf("Selected items:");
     for(int i = 0; i < SIZE2; i++){
         if(result[i] == 1){
-            printf("%c ", items[i]);
+            printf(" %c", items[i]);
         }
     }
     printf("\n");
